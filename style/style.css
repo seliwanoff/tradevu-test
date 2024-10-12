@@ -1,0 +1,657 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("../assets/fonts/Rubik-Regular.ttf") format("truetype");
+}
+:root {
+  --primary_background: #f9fafb;
+  --primary_button_color: #5e01d6;
+  --secondary_button_color: #ebe4ff;
+  --header_border: #eaecf0;
+  --primary_text_color: #344054;
+  --active_text_color: #6f00ff;
+}
+body {
+  background-color: var(--primary_background);
+  width: 100%;
+  height: 100%;
+}
+.container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+header {
+  height: 80px;
+  background-color: #fff;
+  padding: 0px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--header_border);
+}
+.mid_header {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+.mid_header img {
+  height: 2rem;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  align-items: center;
+  list-style: none;
+}
+
+ul li {
+  padding: 0px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+  letter-spacing: -2.5%;
+  font-family: "Rubik";
+  color: var(--primary_text_color);
+  font-size: 1rem;
+  line-height: 18.96px;
+}
+ul li img {
+  width: 24px !important;
+  height: auto !important;
+}
+.active {
+  font-weight: 600;
+  color: var(--active_text_color);
+}
+.notification_buiness {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  cursor: pointer;
+}
+.business_name {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  position: relative;
+}
+.business_names {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  cursor: pointer;
+  position: relative;
+  justify-content: flex-end;
+  margin-top: 40px;
+}
+.circle_name {
+  box-shadow: 0 0 0 0.85px #d9cdff;
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+}
+.business_name span {
+  color: #101828;
+  font-family: "Rubik";
+  font-weight: 500;
+}
+.business_names span {
+  color: #101828;
+  font-family: "Rubik";
+  font-weight: 500;
+}
+.business_name img {
+  height: 1rem;
+}
+.business_names img {
+  height: 1rem;
+}
+.menu {
+  font-size: 2rem !important;
+  cursor: pointer;
+  display: none;
+}
+.hero_top {
+  padding: 24px 40px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.name_eye {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.name_eye span {
+  font-weight: 600;
+  color: #344054;
+  font-family: "Rubik";
+}
+.name_eye img {
+  height: 1.5rem;
+}
+
+.overview span {
+  font-family: "Rubik";
+  font-weight: 400;
+  color: #667085;
+  font-size: 0.98rem;
+  line-height: 16px;
+}
+.currency_container {
+  background-color: #eaecf0;
+  padding: 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+.currency_container .data_analytics {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.data_analytics {
+  font-family: "Rubik";
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.data_analytics img {
+  height: 1rem;
+}
+.right_data {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.right_data button {
+  font-family: "Rubik";
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  outline: none;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
+  height: 40px;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}
+.right_data button:first-child {
+  background-color: var(--secondary_button_color);
+  color: var(--primary_button_color);
+}
+.right_data .ceate_button {
+  background-color: var(--primary_button_color);
+  color: #fbfaff;
+}
+.right_data button img {
+  height: 1.5rem;
+  margin-right: 8px;
+}
+.data_container {
+  display: flex;
+  width: 100%;
+  gap: 24px;
+  padding: 0px 40px;
+  box-sizing: border-box;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
+.data_container::-webkit-scrollbar {
+  width: 0px;
+}
+.each_data_card {
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #fff;
+  border: 1px solid #f4f0ff;
+  display: flex;
+  gap: 64px;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 245px;
+}
+.each_mid_inner-card {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+.each_mid_inner-card span {
+  color: #667085;
+  font-family: "Rubik";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+}
+.print {
+  display: none;
+}
+.balance_check {
+  width: 100%;
+  margin-top: 16px;
+}
+.balance_check sub {
+  color: #667085;
+  font-weight: 400;
+  font-size: 24px;
+  font-family: "Rubik";
+}
+.lower_bank_details {
+  display: flex;
+}
+.balance_check span {
+  font-size: 28px;
+  color: #344054;
+  font-family: "Rubik";
+  line-height: 12px;
+}
+.lower_bank_details {
+  margin-top: 10px;
+}
+.mid_bank_detail img {
+  height: 1rem;
+  cursor: pointer;
+}
+.invoices {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bank {
+  color: #667085;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16.59px;
+}
+.alltime {
+  display: flex;
+  align-items: center;
+  font-family: "Rubik";
+  font-weight: 600;
+  color: #344054;
+  line-height: 24px;
+  font-size: 14px;
+}
+.alltime img {
+  height: 1rem;
+}
+.transactions_data {
+  padding: 0px 40px;
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  align-items: flex-start;
+}
+.each_transaction_card {
+  flex-grow: 1;
+  padding: 16px 24px 24px 24px;
+  box-shadow: 0 0 0 0.5px #e7e9fb;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  background-color: #fff;
+  flex-basis: 500px;
+  border-radius: 16px;
+}
+.recent_transaction_log {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.recent_transaction_log span {
+  font-family: "Rubik";
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 16px;
+  color: #667085;
+}
+.each_transaction_table {
+  padding-bottom: 8px;
+  padding-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.date_transaction {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+}
+.date_transaction span {
+  font-size: 14px;
+  color: #98a2b3;
+  font-weight: 500;
+  font-family: "Rubik";
+  line-height: 14px;
+}
+.line {
+  border: 1px solid #e7e9fb;
+  width: 100%;
+}
+.main_transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.transaction_name_date_status span {
+  font-weight: 500;
+  font-size: 14px;
+  font-family: "Rubik";
+  line-height: 12px;
+  color: #101828;
+}
+.time_status {
+  margin-top: 10px;
+}
+.time_status span {
+  color: #475467;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: "Rubik";
+  text-align: right;
+}
+.time_status .status {
+  color: #e4b200;
+}
+.left_transaction {
+  text-align: right;
+}
+.left_transaction span {
+  text-align: right !important;
+}
+.transaction_history {
+  color: #7d14ff;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  font-family: "Rubik";
+  margin-top: 30px;
+  cursor: pointer;
+}
+.button_card {
+  padding: 0px 40px;
+  max-width: 500px;
+  display: none;
+  margin-top: 20px;
+}
+.inner_card_button {
+  position: relative;
+}
+.st {
+  font-weight: 500 !important;
+  color: #344054 !important;
+  font-size: 1rem !important;
+}
+@media only screen and (max-width: 941px) {
+  .menu {
+    display: block;
+  }
+  .nav_bar {
+    display: none;
+  }
+  .business_name {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 712px) {
+  .inner_card_button {
+    display: none;
+  }
+  .button_card {
+    display: block;
+    margin-top: 0px;
+  }
+}
+@media only screen and (max-width: 490px) {
+  .pr_statement {
+    display: none;
+  }
+  .print {
+    display: block;
+  }
+  .right_data button {
+    font-size: 0.85rem;
+  }
+  header {
+    padding: 0px 24px;
+  }
+  .hero_top {
+    padding: 24px;
+  }
+  .data_container {
+    padding: 0px 24px;
+  }
+  .button_card {
+    padding: 0px 24px;
+  }
+  .transactions_data {
+    padding: 0px 24px;
+  }
+  .not-mid-drop {
+    right: 0 !important;
+    left: auto !important;
+  }
+  .d-btn {
+    width: 100% !important;
+  }
+  .mid_header img {
+    height: 24px;
+  }
+}
+.review_quote {
+  color: #7d14ff;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 500;
+  font-family: "Rubik";
+  cursor: pointer;
+  text-align: right;
+  word-break: keep-all;
+  white-space: nowrap;
+}
+.create_drop_down {
+  position: absolute;
+  padding: 8px 16px;
+  border-radius: 8px;
+  top: 55px;
+  z-index: 1;
+  background-color: #fff;
+  right: 0;
+
+  opacity: 0;
+  display: none;
+
+  box-shadow: 0px 32px 64px -12px #10182824;
+  transition: opacity 0.4s ease, max-height 0.4s ease, visibility 0.4s;
+}
+.manage_each_toggle_account {
+  padding: 8px 16px;
+  background: #f2f4f7;
+  display: flex;
+  align-items: center;
+}
+.manage_each_toggle_account img {
+  height: 1rem;
+}
+.content_toggle .top_content {
+  display: inline-block;
+  font-weight: 400;
+  font-family: "Rubik";
+  font-size: 1rem;
+  color: #101828;
+}
+.content_toggle .bottom_content {
+  font-weight: 400;
+  font-size: 12px;
+  color: #667085;
+  display: inline-block;
+  font-family: "Rubik";
+}
+.manage_account_drop {
+  max-width: 270px;
+  width: 100%;
+}
+.inner_create_group {
+  width: 100%;
+}
+.each_item_create {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  cursor: pointer;
+}
+.actives {
+  opacity: 1;
+  visibility: visible;
+  display: block;
+}
+.each_item_create:not(:last-child) {
+  border-bottom: 1px solid #d9cdff;
+}
+.each_item_create span {
+  font-weight: 400;
+  font-family: "Rubik";
+  font-size: 1rem;
+  line-height: 1rem;
+  background: inherit !important;
+  color: #101828 !important;
+}
+.each_item_create img {
+  height: 1rem;
+  margin-right: 15px;
+}
+.manage_left_drop {
+  left: auto;
+  right: 335px;
+  top: 80px;
+}
+.sidename {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.name_drop_business {
+  display: flex;
+  flex-direction: column;
+}
+
+.name_drop_business .loggedIn {
+  color: #11a811 !important;
+  font-family: "Rubik";
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14.22px;
+  text-align: left;
+  display: inline-block !important;
+}
+.add_business_button {
+  border: 1px solid #d9cdff;
+  border-radius: 8px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Rubik";
+  line-height: 16px;
+  color: #5e01d6;
+  margin-top: 10px;
+  background-color: #fff;
+}
+.notification_drop {
+  width: 100%;
+  max-width: 450px;
+  box-sizing: border-box;
+}
+.notification_message {
+  overflow-y: auto;
+  height: 100%;
+  height: 470px;
+}
+.notification_message::-webkit-scrollbar {
+  width: 5px;
+}
+.each_message {
+  padding: 16px 0px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.each_message:not(:last-child) {
+  border-bottom: 1px solid #eaecf0;
+}
+.line_message {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.line_message p {
+  font-weight: 400;
+  font-family: "Rubik";
+  color: #101828;
+  font-size: 1rem;
+  padding: 0px;
+}
+.line_message span {
+  color: #667085;
+  font-size: 12px;
+  font-family: "Rubik";
+  font-weight: 400;
+}
+.hero_modal {
+  position: fixed;
+  background-color: #fff;
+  height: 100vh;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  padding: 0px 24px;
+  display: none;
+
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.hero_header {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero_image {
+  height: 24px;
+}
+.close {
+  height: 32px;
+  cursor: pointer;
+}
+.nav-header-hero {
+  margin-top: 40px;
+}
+.nav-header-hero ul {
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: end;
+}
