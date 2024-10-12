@@ -439,6 +439,8 @@ ul li img {
   }
   .button_card {
     padding: 0px 24px;
+    margin-top: 10px !important;
+
   }
   .transactions_data {
     padding: 0px 24px;
